@@ -2,11 +2,11 @@
 #redis-server ./redis2/redis.conf --loglevel verbose
 echo starting redis 1
 cp ./redis//redis.conf.master ./redis//redis.conf
-redis-server ./redis/redis.conf --loglevel verbose
+redis-server ./redis/redis.conf --loglevel verbose --protected-mode no
 sleep 2
 echo starting redis 2
 cp ./redis2//redis.conf.slave ./redis2//redis.conf
-redis-server ./redis2/redis.conf --loglevel verbose
+redis-server ./redis2/redis.conf --loglevel verbose --protected-mode no
 sleep 2
 #echo starting redis 3
 #redis-server ./redis3/redis.conf 
